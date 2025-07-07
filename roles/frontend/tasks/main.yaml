@@ -9,10 +9,6 @@
     name: nginx
     state: present
 
-- name: Debug catalogue_host value
-  debug:
-    var: catalogue_host
-
 - name: start and enable nginx
   ansible.builtin.service:
     name: nginx
