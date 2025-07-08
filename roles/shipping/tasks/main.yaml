@@ -8,6 +8,11 @@
     name: common
     tasks_from: maven
 
+- name: Install MySQL client
+  ansible.builtin.dnf:
+    name: mysql
+    state: present
+
 - name: import data
   community.mysql.mysql_db:
     name: all
