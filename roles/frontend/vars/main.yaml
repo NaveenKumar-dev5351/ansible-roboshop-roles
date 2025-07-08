@@ -1,1 +1,3 @@
 CATALOGUE_HOST: catalogue.devops84.store
+USER_HOST: user.devops84.store
+CART_HOST: cart.devops84.store
