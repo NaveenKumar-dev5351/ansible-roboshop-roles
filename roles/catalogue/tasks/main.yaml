@@ -30,6 +30,14 @@
   # ignore_errors: true
   # ignore_unreachable: true
 
+- name: show raw mongosh output
+  debug:
+    var: catalogue_output
+
+- name: show last line from stdout_lines
+  debug:
+    msg: "{{ catalogue_output.stdout_lines[-1] }}"
+
 - name: load products
   ansible.builtin.shell: mongosh --host mongodb.devops84.store < /app/db/master-data.js
   when: catalogue_output.stdout_lines[-1] | int < 0
